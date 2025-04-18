@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+    background: #121212;
+    color: #eee;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+body.dark .container {
+    background: #1e1e1e;
+    box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+body.dark h1, body.dark h2 {
+    color: #ddd;
+}
+
+input, select, button, textarea {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    color: #000;
+}
+
+body.dark input, body.dark select, body.dark textarea {
+    background: #333;
+    color: #eee;
+    border: 1px solid #555;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+#taskList li.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+#progressBar {
+    width: 100%;
+    background-color: #ddd;
+    height: 20px;
+    border-radius: 5px;
+}
+
+#progressFill {
+    height: 100%;
+    width: 0%;
+    background-color: #28a745;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+.navbar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.navbar span {
+    flex-grow: 1;
+    font-weight: bold;
+}

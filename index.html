@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Placement Prep Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="loginPage" class="container">
+        <h1>🔐 Login</h1>
+        <input type="text" id="username" placeholder="Enter your name..." />
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="mainApp" class="container" style="display: none;">
+        <div class="navbar">
+            <span id="welcome"></span>
+            <button onclick="switchView('All')">Home</button>
+            <button onclick="switchView('DSA')">DSA</button>
+            <button onclick="switchView('DBMS')">DBMS</button>
+            <button onclick="logout()">Logout</button>
+            <button onclick="toggleDarkMode()">🌓</button>
+        </div>
+
+        <h1>📘 Placement Prep Tracker</h1>
+
+        <div class="section">
+            <h2>Add Task</h2>
+            <input type="text" id="taskInput" placeholder="Enter task..." />
+            <select id="category">
+                <option value="Aptitude">Aptitude</option>
+                <option value="Coding">Coding</option>
+                <option value="DSA">DSA</option>
+                <option value="DBMS">DBMS</option>
+                <option value="Resume">Resume</option>
+                <option value="Interview">Interview</option>
+            </select>
+            <button onclick="addTask()">Add Task</button>
+        </div>
+
+        <div class="section">
+            <h2>Tasks</h2>
+            <ul id="taskList"></ul>
+        </div>
+
+        <div class="section">
+            <h2>Progress</h2>
+            <div id="progressBar">
+                <div id="progressFill"></div>
+            </div>
+            <p id="progressText">0% complete</p>
+        </div>
+
+        <div class="section">
+            <h2>Notes / Resources</h2>
+            <textarea id="notes" placeholder="Write notes or paste useful links..."></textarea>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
